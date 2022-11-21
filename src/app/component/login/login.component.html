@@ -1,10 +1,10 @@
-<div class="container-fluid ">
+<!--div class="container-fluid ">
     <div class="row">
         <div class="d-flex justify-content-center">
             <div class="card shadow" style="width: 50rem; height: 50rem;">
                 <div class="card-body">
                     <form>
-                        <div class="mb-4 text-center">
+                        <div class="mb-4" style="text-align: center;">
                             <h4 class="text-dark text-muted">Login</h4>
                         </div>
                         <div class="mb-4">
@@ -41,4 +41,27 @@
             </div>
         </div>
     </div>
-</div>
+</div-->
+
+
+
+<div class="signup">
+    <div class="signup-connect">
+      <h1>Create your account</h1>
+      <a href="#" class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
+      <a href="#" class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i> Sign in with Twitter</a>
+      <a (click)="signInWithGoogle()" style="text-decoration: none;"  class="btn btn-social btn-google"><i class="fa fa-google" ></i> Sign in with Google</a>
+    </div>
+    <div class="signup-classic">
+      <h2>Login</h2>
+      <form class="form">
+        <fieldset class="email">
+            <input type="email" class="form-control" name ="email" [(ngModel)] ="email" placeholder="Email Address">
+        </fieldset>
+        <fieldset class="password">
+            <input type="password" class="form-control" name="password" [(ngModel)] ="password" placeholder="Password">
+        </fieldset>
+        <button type="submit" class="btn" (click)="login()">Login</button>
+      </form>
+    </div>
+  </div>

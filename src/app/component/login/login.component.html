@@ -1,67 +1,45 @@
-<!--div class="container-fluid ">
-    <div class="row">
-        <div class="d-flex justify-content-center">
-            <div class="card shadow" style="width: 50rem; height: 50rem;">
-                <div class="card-body">
-                    <form>
-                        <div class="mb-4" style="text-align: center;">
-                            <h4 class="text-dark text-muted">Login</h4>
-                        </div>
-                        <div class="mb-4">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" class="form-control" name ="email" [(ngModel)] ="email" placeholder="Email Address">
-                        </div>
-                        <div class="mb-4">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" name="password" [(ngModel)] ="password" placeholder="Password">
-                        </div>
-                        <div class="text-center">
-                            <button type="button" class="btn btn-info" (click)="login()">Login</button>
-                        </div>
-                        <div class="row mt-5">
-                            <div class="col-md-6">
-                                <a href="/register" style="text-decoration: none;">Need Account ?</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="/forgot-password" class="text-dark" style="text-decoration: none;">Forgot Password ?</a>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="card shadow text-center">
-                                <a (click)="signInWithGoogle()" style="text-decoration: none;">
-                                    
-                                    <div class="card-body">
-                                        <img src = "../../../assets/Google__G__Logo.svg.png" alt="" height="24px" width="24px"> Sign in with Google
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <!--Stylesheet-->
+    
+</head>
+
+<body>
+  <div class="background ">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <form>
+    <h3>Login</h3>
+    
+        <label for="exampleInputEmail1" class="form-label" id="floatinginput">Email address</label>
+        <input type="email"  name ="email" [(ngModel)] ="email" placeholder="Email Address">
+    
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password"  name="password" [(ngModel)] ="password" placeholder="Password">
+    <div class="row mt-3">
+        <div class="col-mb-5 ps-4 ms-1">
+            <a href="/register" style="text-decoration: none;">Don't Have an Account? Sign-up </a>
+        </div>
+        <div class="col-mb-6 mt-2 ps-4 ms-1 justify-content-end">
+            <a href="/forgot-password" class="text-danger" style="text-decoration: none;">Forgot your password? Click here</a>
         </div>
     </div>
-</div-->
 
-
-
-<div class="signup">
-    <div class="signup-connect">
-      <h1>Create your account</h1>
-      <a href="#" class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
-      <a href="#" class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i> Sign in with Twitter</a>
-      <a (click)="signInWithGoogle()" style="text-decoration: none;"  class="btn btn-social btn-google"><i class="fa fa-google" ></i> Sign in with Google</a>
+    <button type="button" class="btn btn-info" (click) ="login()" >Log In</button>
+    <div class="social">
+        <div class="go" (click)="signInWithGoogle()" style="text-decoration: none;" >
+            <img src = "../../../assets/Google__G__Logo.svg.png" alt="" height="24px" width="24px">
+            <i class="fab fa-google"></i> Sign In with Google
+        </div>
     </div>
-    <div class="signup-classic">
-      <h2>Login</h2>
-      <form class="form">
-        <fieldset class="email">
-            <input type="email" class="form-control" name ="email" [(ngModel)] ="email" placeholder="Email Address">
-        </fieldset>
-        <fieldset class="password">
-            <input type="password" class="form-control" name="password" [(ngModel)] ="password" placeholder="Password">
-        </fieldset>
-        <button type="submit" class="btn" (click)="login()">Login</button>
-      </form>
-    </div>
-  </div>
+    </form>
+</body>
+
+</html>

@@ -21,12 +21,12 @@ export class RegisterComponent implements OnInit {
   register(){
 
     if(this.email == ''){
-      alert('Please enter email');
+      alert('Please enter correct credentials');
       return;
     }
 
     if(this.password == ''){
-      alert('Please enter password');
+      alert('Please enter correct credentials');
       return;
     }
 

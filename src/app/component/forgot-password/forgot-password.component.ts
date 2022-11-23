@@ -17,6 +17,13 @@ export class ForgotPasswordComponent implements OnInit {
   }
 
   forgotPassword(){
+
+    if(this.email == ''){
+      alert('Please enter correct credentials')
+      return;
+    }
+
+
     this.auth.forgotPassword(this.email);
     this.email = '';
   }

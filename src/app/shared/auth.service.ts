@@ -6,6 +6,8 @@ import { Router } from '@angular/router'
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class AuthService {
 
   constructor(private fireauth : AngularFireAuth, private router : Router) { }
@@ -26,7 +28,7 @@ export class AuthService {
 
 
     }, err =>{
-        alert('Something went wrong');
+        alert('Please enter login credentials.');
         this.router.navigate(['/login']);
     })
   }
@@ -87,6 +89,11 @@ export class AuthService {
     }, err =>{
       alert(err.message);
     })
+  }
+
+
+  IsloggedIn(){
+    return !!localStorage.getItem('token');
   }
 
 
